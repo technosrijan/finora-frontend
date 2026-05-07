@@ -1,0 +1,307 @@
+@import "tailwindcss" source(none);
+@import "tw-animate-css";
+@source "../src";
+
+@custom-variant light (&:is(.light *));
+
+/*
+ * FINORA — Enterprise Financial Intelligence
+ * Clean, modern dark-first design system.
+ */
+
+@theme inline {
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* ── DARK MODE (default) ── */
+:root {
+  --radius: 4px;
+  --background: oklch(0.10 0.005 260);
+  --foreground: oklch(0.95 0.005 260);
+  --card: oklch(0.13 0.008 260);
+  --card-foreground: oklch(0.95 0.005 260);
+  --popover: oklch(0.13 0.008 260);
+  --popover-foreground: oklch(0.95 0.005 260);
+  --primary: oklch(0.75 0.22 175);
+  --primary-foreground: oklch(0.04 0.01 175);
+  --secondary: oklch(0.17 0.01 260);
+  --secondary-foreground: oklch(0.92 0.005 260);
+  --muted: oklch(0.17 0.01 260);
+  --muted-foreground: oklch(0.50 0.01 260);
+  --accent: oklch(0.70 0.18 15);
+  --accent-foreground: oklch(0.98 0.005 260);
+  --destructive: oklch(0.60 0.24 25);
+  --destructive-foreground: oklch(0.99 0.005 260);
+  --border: oklch(0.22 0.01 260);
+  --input: oklch(0.22 0.01 260);
+  --ring: oklch(0.75 0.22 175);
+  --chart-1: oklch(0.75 0.22 175);
+  --chart-2: oklch(0.70 0.18 15);
+  --chart-3: oklch(0.65 0.15 200);
+  --chart-4: oklch(0.80 0.14 80);
+  --chart-5: oklch(0.55 0.18 280);
+  --sidebar: oklch(0.11 0.005 260);
+  --sidebar-foreground: oklch(0.88 0.005 260);
+  --sidebar-primary: oklch(0.75 0.22 175);
+  --sidebar-primary-foreground: oklch(0.04 0.01 175);
+  --sidebar-accent: oklch(0.17 0.01 260);
+  --sidebar-accent-foreground: oklch(0.92 0.005 260);
+  --sidebar-border: oklch(0.26 0.01 260);
+  --sidebar-ring: oklch(0.75 0.22 175);
+}
+
+/* ── LIGHT MODE ── */
+.light {
+  --radius: 4px;
+  --background: oklch(0.98 0 0);
+  --foreground: oklch(0.12 0.04 264);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.12 0.04 264);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.12 0.04 264);
+  --primary: oklch(0.50 0.20 175);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.95 0.01 248);
+  --secondary-foreground: oklch(0.25 0.04 264);
+  --muted: oklch(0.95 0.01 248);
+  --muted-foreground: oklch(0.50 0.02 256);
+  --accent: oklch(0.55 0.14 15);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.58 0.23 27);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.90 0.01 256);
+  --input: oklch(0.90 0.01 256);
+  --ring: oklch(0.50 0.20 175);
+  --chart-1: oklch(0.50 0.20 175);
+  --chart-2: oklch(0.55 0.14 15);
+  --chart-3: oklch(0.65 0.17 162);
+  --chart-4: oklch(0.72 0.16 85);
+  --chart-5: oklch(0.60 0.24 16);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.12 0.04 264);
+  --sidebar-primary: oklch(0.50 0.20 175);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.95 0.01 248);
+  --sidebar-accent-foreground: oklch(0.25 0.04 264);
+  --sidebar-border: oklch(0.90 0.01 256);
+  --sidebar-ring: oklch(0.50 0.20 175);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html,
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+/* ── GRADIENT TEXT ── */
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-hero {
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.55) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.light .text-gradient-hero {
+  background: linear-gradient(180deg, #0f172a 0%, rgba(15,23,42,0.55) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── LIGHT-THEME-AWARE UTILITIES ── */
+
+/* Background grid — white lines on dark, dark lines on light */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.025) 1px, transparent 1px);
+}
+.light .grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+}
+
+/* Shimmer sweep — white on dark, black on light */
+.shimmer {
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.03), transparent);
+}
+.light .shimmer {
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.025), transparent);
+}
+
+/* Print styles */
+@media print {
+  .no-print, nav, aside, header button, footer {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* ─── ANIMATIONS ─── */
+
+/* Slow spin */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+/* Float orbs */
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+.animate-float {
+  animation: float 12s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float 14s ease-in-out infinite;
+  animation-delay: -4s;
+}
+.animate-float-slow {
+  animation: float 18s ease-in-out infinite;
+  animation-delay: -8s;
+}
+
+/* Gradient orb drift */
+@keyframes orb-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-40px, 30px) scale(1.08); }
+  50% { transform: translate(-20px, 60px) scale(0.95); }
+  75% { transform: translate(20px, 40px) scale(1.05); }
+}
+@keyframes orb-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(50px, -30px) scale(1.06); }
+  66% { transform: translate(30px, -60px) scale(0.94); }
+}
+@keyframes orb-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 20px) scale(1.1); }
+}
+@keyframes orb-4 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40% { transform: translate(20px, -40px) scale(0.96); }
+  80% { transform: translate(-10px, -20px) scale(1.04); }
+}
+
+.animate-orb-1 {
+  animation: orb-1 20s ease-in-out infinite;
+}
+.animate-orb-2 {
+  animation: orb-2 25s ease-in-out infinite;
+  animation-delay: -5s;
+}
+.animate-orb-3 {
+  animation: orb-3 18s ease-in-out infinite;
+  animation-delay: -10s;
+}
+.animate-orb-4 {
+  animation: orb-4 22s ease-in-out infinite;
+  animation-delay: -15s;
+}
+
+/* Light streak */
+@keyframes streak {
+  0% { transform: translateX(-10%) scaleX(0.8); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateX(10%) scaleX(1.2); opacity: 0; }
+}
+@keyframes streak-slow {
+  0% { transform: translateX(-15%) scaleX(0.6); opacity: 0; }
+  15% { opacity: 0.8; }
+  85% { opacity: 0.8; }
+  100% { transform: translateX(15%) scaleX(1.4); opacity: 0; }
+}
+.animate-streak {
+  animation: streak 18s ease-in-out infinite;
+}
+.animate-streak-slow {
+  animation: streak-slow 24s ease-in-out infinite;
+}
+
+/* Typewriter cursor blink */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-cursor-blink {
+  animation: cursor-blink 1s step-end infinite;
+}
